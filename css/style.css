@@ -1,0 +1,74 @@
+
+
+.corpo {
+    background-color: rgb(250, 239, 239);
+}
+
+
+.texto-desconto h4{
+    margin: 0;
+    background: wheat; 
+    padding: 20px;
+    color: rgb(5, 34, 97);
+    font-family: 'Montserrat', sans-serif;
+    
+    text-align: center;
+}
+
+
+.centralizar {
+    text-align: center;
+}
+
+
+
+
+.card {
+    height: 650px;
+    padding-bottom: 200px;
+}
+
+.card:hover {
+    width: 104%;
+    box-shadow: 3px 3px 5px rgb(112, 110, 110);
+}
+
+
+
+
+
+
+footer a {
+    color: white;
+}
+
+.service-box {
+    text-align: center;
+    font-size: 16px;
+}
+.service-box i{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+
+/* Media query: */
+
+
+
+@media only screen and (max-width: 995px) {
+    .card {
+        height: 750px;
+    }
+}
+
+
+@media only screen and (min-width: 760px) {
+    .card {
+        width: 105%; 
+        font-size: 14px;
+        height: 100%;
+    }
+}
+
+
