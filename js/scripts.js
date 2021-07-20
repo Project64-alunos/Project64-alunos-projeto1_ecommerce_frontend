@@ -19,12 +19,12 @@ async function salvarUsuario() {
         data: JSON.stringify(user),
         contentType: "application/json; charset=utf-8",
         success: function (response) {
-            alert("Usuario cadastrado com sucesso!");
+            alert("Cadastro realizado com sucesso!");
             limparFormns();
         }
 
     }).fail(function (xhr, status, errorThrown) {
-        alert("Error ao salvar " + xhr.responseText);
+        alert("Error ao salvar! " + xhr.responseJSON.error);
         limparFormns();
     });
 }
