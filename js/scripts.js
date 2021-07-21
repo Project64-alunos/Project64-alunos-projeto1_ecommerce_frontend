@@ -1,4 +1,4 @@
-var BASE_URL = "http://localhost:8080/users"
+var BASE_URL = "https://wideecommerce.herokuapp.com"
 
 // Método para limpar o formulário do modal
 function limparFormns() {
@@ -15,7 +15,7 @@ async function salvarUsuario() {
 
     await $.ajax({
         method: "POST",
-        url: BASE_URL,
+        url: `${BASE_URL}/users`,
         data: JSON.stringify(user),
         contentType: "application/json; charset=utf-8",
         success: function (response) {
@@ -24,7 +24,10 @@ async function salvarUsuario() {
         }
 
     }).fail(function (xhr, status, errorThrown) {
-        alert("Error ao salvar! " + xhr.responseJSON.error);
+        if (xhr.responseJSON.error == "Bad Request") {
+            alert("Error ao salvar! Preencha os campos vazios.");
+        }
+        alert(xhr.responseJSON.error);
         limparFormns();
     });
 }
