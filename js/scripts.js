@@ -1,4 +1,4 @@
-var BASE_URL = "https://wideecommerce.herokuapp.com"
+var BASE_URL = "https://projeto01-ecommerce-backend.herokuapp.com/"
 
 // Método para limpar o formulário do modal
 function limparFormns() {
@@ -24,10 +24,12 @@ async function salvarUsuario() {
         }
 
     }).fail(function (xhr, status, errorThrown) {
-        if (xhr.responseJSON.error == "Bad Request") {
-            alert("Error ao salvar! Preencha os campos vazios.");
+        if(xhr.responseJSON.error == "Bad Request"){
+            alert("Preencher todos os campos corretamente!");
+            limparFormns();
+        }else {
+          alert(xhr.responseJSON.message);
+          limparFormns();
         }
-        alert(xhr.responseJSON.error);
-        limparFormns();
     });
 }
