@@ -27,6 +27,7 @@ Esse é um projeto para um site e-commerce, realizado pelo grupo para fins de es
 - Spring Boot
 - JPA / Hibernate
 - Maven
+- H2
 - Postgres
 - SQL
 ## Front end
