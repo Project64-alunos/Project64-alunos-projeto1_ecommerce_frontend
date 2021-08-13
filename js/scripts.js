@@ -1,4 +1,4 @@
-var BASE_URL = "https://projeto01-ecommerce-backend.herokuapp.com/"
+var BASE_URL = "https://projeto01-ecommerce-backend.herokuapp.com"
 
 // Método para limpar o formulário do modal
 function limparFormns() {
@@ -19,17 +19,13 @@ async function salvarUsuario() {
         data: JSON.stringify(user),
         contentType: "application/json; charset=utf-8",
         success: function (response) {
-            alert("Cadastro realizado com sucesso!");
+            alert("Cadastro realizado com sucesso!\n"
+            +"Você receberá um email de nossa Equipe");
             limparFormns();
         }
 
     }).fail(function (xhr, status, errorThrown) {
-        if(xhr.responseJSON.error == "Bad Request"){
-            alert("Preencher todos os campos corretamente!");
-            limparFormns();
-        }else {
           alert(xhr.responseJSON.message);
           limparFormns();
-        }
     });
 }
