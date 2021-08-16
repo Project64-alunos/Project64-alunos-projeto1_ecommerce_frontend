@@ -8,6 +8,8 @@ function limparFormns() {
 // Método para 'Cadastrar' usuário no banco de dados
 async function salvarUsuario() {
 
+    $('#btnCadastrar').prop("style",'display:none');
+	$('#btnLoading').show();
     let name = document.getElementById('name').value
     let email = document.getElementById('email').value
 
@@ -22,10 +24,14 @@ async function salvarUsuario() {
             alert("Cadastro realizado com sucesso!\n"
             +"Você receberá um email de nossa Equipe");
             limparFormns();
+            $('#btnLoading').prop("style",'display:none');
+			$('#btnCadastrar').show();
         }
 
     }).fail(function (xhr, status, errorThrown) {
           alert(xhr.responseJSON.message);
           limparFormns();
+          $('#btnLoading').prop("style",'display:none');
+		  $('#btnCadastrar').show();
     });
 }
