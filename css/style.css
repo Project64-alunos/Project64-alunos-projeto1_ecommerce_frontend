@@ -34,8 +34,34 @@
 }
 
 
+.alertError {
+    color:rgb(240, 6, 52);
+    padding-left: 1cm;
+}
 
+.alertSuccess {
+  background-color: #2f6931; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+}
 
+.alertInfo {
+    background-color: #ccdef5; /* Green */
+    border: none;
+    color: rgb(50, 41, 180);
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+  }
 
 
 footer a {
